@@ -17,6 +17,9 @@
 		FD9247EE2579FD7B00634BE0 /* ArrayTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9247ED2579FD7B00634BE0 /* ArrayTestCases.swift */; };
 		FDA6BD7D257F53D300C31E6A /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6BD7C257F53D300C31E6A /* StringUtilities.swift */; };
 		FDA6BD80257F5A3D00C31E6A /* StringTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6BD7F257F5A3D00C31E6A /* StringTestCases.swift */; };
+		FDF77A8C25967089004FA9BC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF77A8B25967089004FA9BC /* LinkedList.swift */; };
+		FDF77A8E25967153004FA9BC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF77A8D25967153004FA9BC /* ListNode.swift */; };
+		FDF77A9025967C9E004FA9BC /* LinkedListTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF77A8F25967C9E004FA9BC /* LinkedListTestCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		FD9247F1257A04EB00634BE0 /* AlgorithmsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlgorithmsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FDA6BD7C257F53D300C31E6A /* StringUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
 		FDA6BD7F257F5A3D00C31E6A /* StringTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTestCases.swift; sourceTree = "<group>"; };
+		FDF77A8B25967089004FA9BC /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		FDF77A8D25967153004FA9BC /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		FDF77A8F25967C9E004FA9BC /* LinkedListTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTestCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 				FD9247D02579FB3200634BE0 /* Assets.xcassets */,
 				FD9247D22579FB3200634BE0 /* LaunchScreen.storyboard */,
 				FD9247D52579FB3200634BE0 /* Info.plist */,
+				FDF77A8A2596706E004FA9BC /* LinkedList */,
 				FDA6BD7B257F53AF00C31E6A /* Strings */,
 				FD9247E92579FC3100634BE0 /* Array */,
 			);
@@ -106,6 +113,7 @@
 				FD9247E02579FB3200634BE0 /* Info.plist */,
 				FD9247ED2579FD7B00634BE0 /* ArrayTestCases.swift */,
 				FDA6BD7F257F5A3D00C31E6A /* StringTestCases.swift */,
+				FDF77A8F25967C9E004FA9BC /* LinkedListTestCases.swift */,
 			);
 			path = AlgorithmsTests;
 			sourceTree = "<group>";
@@ -124,6 +132,15 @@
 				FDA6BD7C257F53D300C31E6A /* StringUtilities.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		FDF77A8A2596706E004FA9BC /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				FDF77A8D25967153004FA9BC /* ListNode.swift */,
+				FDF77A8B25967089004FA9BC /* LinkedList.swift */,
+			);
+			path = LinkedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,11 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF77A8C25967089004FA9BC /* LinkedList.swift in Sources */,
 				FD9247CC2579FB3100634BE0 /* ViewController.swift in Sources */,
 				FDA6BD7D257F53D300C31E6A /* StringUtilities.swift in Sources */,
 				FD9247C82579FB3100634BE0 /* AppDelegate.swift in Sources */,
 				FD9247EB2579FC5100634BE0 /* ArrayUtilities.swift in Sources */,
 				FD9247CA2579FB3100634BE0 /* SceneDelegate.swift in Sources */,
+				FDF77A8E25967153004FA9BC /* ListNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +261,7 @@
 			files = (
 				FDA6BD80257F5A3D00C31E6A /* StringTestCases.swift in Sources */,
 				FD9247EE2579FD7B00634BE0 /* ArrayTestCases.swift in Sources */,
+				FDF77A9025967C9E004FA9BC /* LinkedListTestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
