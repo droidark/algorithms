@@ -76,4 +76,43 @@ class LinkedList {
         
         return dummyHead!.next!
     }
+    
+    public static func testCyclicity(list1: ListNode) -> ListNode? {
+        var slow: ListNode? = list1
+        var fast: ListNode? = list1
+        
+        while fast != nil && fast?.next != nil {
+            slow = slow?.next
+            fast = fast?.next?.next
+            
+            if slow === fast {
+                var cycleLen = 0
+                
+                // Calculate cycle length
+                repeat {
+                    cycleLen += 1
+                    fast = fast?.next
+                } while slow !== fast
+                
+                var advancedIterator: ListNode? = list1
+                var iter: ListNode? = list1
+                
+                // Start of cycle
+                while cycleLen > 0 {
+                    advancedIterator = advancedIterator?.next
+                    cycleLen -= 1
+                }
+                
+                // Both iterations advanced in tandem
+                while iter !== advancedIterator {
+                    iter = iter?.next
+                    advancedIterator = advancedIterator?.next
+                }
+                
+                return advancedIterator
+            }
+        }
+        
+        return nil
+    }
 }

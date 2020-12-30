@@ -11,22 +11,43 @@ import Foundation
 class ListNode {
     var value = 0
     var next: ListNode?
-    var tail: ListNode?
+    private var tail: ListNode?
+    
+    var lastNode: ListNode {
+        return tail ?? lastElement()
+    }
     
     init(data: Int){
         self.value = data
+    }
+
+    private func lastElement() -> ListNode {
+        var currentNode: ListNode? = self
+        var lastNode = self
+        
+        while let lastElement = currentNode {
+            currentNode = lastElement.next
+            lastNode = lastElement
+        }
+        
+        return lastNode
     }
     
     func appendValue(data: Int){
         let lastNode = ListNode(data: data)
         
-        tail = tail ?? self
+        tail = tail ?? lastElement()
         tail?.next = lastNode
         tail = lastNode
     }
     
     func appendNode(node: ListNode) {
-        tail = tail ?? self
+        guard node !== self else {
+            print("Cannot append node to the existing list. It will create a cycle")
+            return
+        }
+        
+        tail = tail ?? lastElement()
         
         tail?.next = node
         
@@ -34,9 +55,8 @@ class ListNode {
         
         while let lastElement = currentNode {
             currentNode = lastElement.next
+            tail = lastElement
         }
-        
-        tail = currentNode
     }
     
     func printList(){

@@ -104,11 +104,30 @@ class LinkedListTestCases: XCTestCase {
     /**
      * Book Elements of Programming Interviews In Java
      *  Problem 7.2 Reverse a single List
+     *  Time Complexity O(f). Time complexity is dominated by the search of fth(end of list)
      */
     
     func testReverseSublist() {
         XCTAssertTrue(LinkedList.reverseSublist(list1: list1, start: 1, end: 5).asArray() == [8,6,3,2,1])
         XCTAssertTrue(LinkedList.reverseSublist(list1: list2, start: 2, end: 5).asArray() == [10,8,7,6])
         XCTAssertTrue(LinkedList.reverseSublist(list1: list4, start: 5, end: 7).asArray() == [19,9,8])
+    }
+    
+    /**
+     * Book Elements of Programming Interviews In Java
+     * Problem 7.3 Test Cyclicity
+     *  
+     */
+    
+    func testCyclicity() {
+        list3.appendNode(node: list2)
+        list3.lastNode.next = list2
+        
+        list6.appendNode(node: list7)
+        list6.lastNode.next = list7
+        
+        XCTAssertTrue(LinkedList.testCyclicity(list1: list3)?.value == list2.value)
+        XCTAssertTrue(LinkedList.testCyclicity(list1: list6)?.value == list7.value)
+        XCTAssertTrue(LinkedList.testCyclicity(list1: list1) == nil)
     }
 }
