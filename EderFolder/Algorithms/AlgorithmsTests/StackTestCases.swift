@@ -39,6 +39,45 @@ class StackTestCases: XCTestCase {
         return stack
     }()
     
+    func sortZeros(input: inout[Int]) -> [Int] {
+        var lastZeroIndex = input.count - 1
+        let numberElements = input.count - 1
+//        var temp = 0
+        
+        for index in 0...input.count - 1 {
+            let realIndex = numberElements - index
+            if input[realIndex] == 0 {
+                input[realIndex] = input[lastZeroIndex]
+                input[lastZeroIndex] = 0
+                lastZeroIndex -= 1
+            }
+        }
+        
+        return input
+    }
+    
+    // It could be much easier to use .reverted() or use descending ranges
+    // Descending ranges doesn't exist in Swift
+    // Reverted() interviewers had asked me to do it manually
+    
+    func testSortZeros() {
+        var example = [1,4,60,2,3,5,0,34,0,534]
+        var example2 = [1,4,60,2,3,5,0,34,534,0]
+        var example3 = [0,1,4,60,2,3]
+        var example4 = [0,0,0,0,4]
+        var example5 = [10,10,10,10,0]
+        var example6 = [0,0,0]
+        
+        sortZeros(input: &example)
+        sortZeros(input: &example2)
+        sortZeros(input: &example3)
+        sortZeros(input: &example4)
+        sortZeros(input: &example5)
+        sortZeros(input: &example6)
+        
+    }
+    
+    
     /**
      * Book Elements of Programming Interviews In Java
      *  Problem 8.1 Stack with MAX APi
@@ -62,5 +101,21 @@ class StackTestCases: XCTestCase {
         XCTAssert(stack3.maxElement() == 5)
         _ = stack3.pop()
         XCTAssert(stack3.maxElement() == nil)
+        
+        var hola = [Int: Int]()
+        
+        var dicitionary = [
+            "a": 43,
+            "b": 43,
+            "c": 43,
+            "d": 43,
+            "e": 43
+        ]
+        
+        let a = dicitionary.dropFirst()
+        
+        print(a)
+        print(dicitionary)
+        
     }
 }
