@@ -14,10 +14,10 @@
     
     Given the scores for a season, find and print the number of times Maria breaks her records for most and least points scored during the season.
 */
+package xyz.krakenkat.app.hackerrank;
 
 public class BreakingTheRecords {
-    
-    public static int[] breakingRecords(int[] scores) {
+    public int[] breakingRecords(int[] scores) {
         int values[] = {0, 0};
         int min = scores[0], max = scores[0];
         for(int i = 1; i < scores.length; i++) {
@@ -31,13 +31,5 @@ public class BreakingTheRecords {
             }
         }
         return values;
-    }
-    
-    public static void main(String[] args) {
-        //int[] scores = {3, 4, 21, 36, 10, 28, 35, 5, 24, 42};
-        int[] scores = {10, 5, 20, 20, 4, 5, 2, 25, 1};
-        int[] values = breakingRecords(scores);
-
-        System.out.println("max: " + values[0] + "; min: " + values[1]);
     }
 }

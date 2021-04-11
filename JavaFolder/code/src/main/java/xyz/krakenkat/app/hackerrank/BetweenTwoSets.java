@@ -18,13 +18,13 @@ There are two numbers between the arrays: 6 and 12
 12%2=0; 12%6=0; 24%12=0 and 36%12=0 for the second value. Return 2
 
 */
+package xyz.krakenkat.app.hackerrank;
 
-import java.util.*;
+import java.util.List;
 
 public class BetweenTwoSets {
-    
-	public static int getTotalX(List<Integer> a, List<Integer> b) {
-		int counter = 0;
+    public int getTotalX(List<Integer> a, List<Integer> b) {
+        int counter = 0;
         boolean factorOne = true;
         boolean factorTwo = true;
 		
@@ -53,12 +53,5 @@ public class BetweenTwoSets {
                 counter++;
         }		
 		return counter;
-	}
-	
-	public static void main(String[] args) {
-        List<Integer> a = Arrays.asList(2, 4);
-        List<Integer> b = Arrays.asList(16, 32, 96);
-        
-        System.out.println(getTotalX(a, b));
     }
 }
