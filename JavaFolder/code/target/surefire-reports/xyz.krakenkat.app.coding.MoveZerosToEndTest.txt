@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: xyz.krakenkat.app.coding.MoveZerosToEndTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! - in xyz.krakenkat.app.coding.MoveZerosToEndTest
-xyz.krakenkat.app.coding.MoveZerosToEndTest.testFour(TestInfo)  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: array contents differ at index [0], expected: <4> but was: <0>
-	at xyz.krakenkat.app.coding.MoveZerosToEndTest.testFour(MoveZerosToEndTest.java:65)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in xyz.krakenkat.app.coding.MoveZerosToEndTest

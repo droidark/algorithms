@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin"/>
-    <property name="sun.java.command" value="C:\Users\droid\AppData\Local\Temp\surefire9085326270061254528\surefirebooter16525323320289527371.jar C:\Users\droid\AppData\Local\Temp\surefire9085326270061254528 2021-04-11T01-53-47_524-jvmRun1 surefire17081712247472362444tmp surefire_010463678202434000772tmp"/>
+    <property name="sun.java.command" value="C:\Users\droid\AppData\Local\Temp\surefire15146578202939990836\surefirebooter1336016345287110966.jar C:\Users\droid\AppData\Local\Temp\surefire15146578202939990836 2021-04-11T12-15-36_065-jvmRun1 surefire3145245832348439329tmp surefire_03539011371009183544tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Code\algorithms\JavaFolder\code\target\test-classes;D:\Code\algorithms\JavaFolder\code\target\classes;C:\Users\droid\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.1\junit-jupiter-api-5.7.1.jar;C:\Users\droid\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\droid\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\droid\.m2\repository\org\junit\platform\junit-platform-commons\1.7.1\junit-platform-commons-1.7.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\droid\AppData\Local\Temp\surefire9085326270061254528\surefirebooter16525323320289527371.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\droid\AppData\Local\Temp\surefire15146578202939990836\surefirebooter1336016345287110966.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15+36-1562"/>
@@ -55,5 +55,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="testOne(TestInfo)" classname="xyz.krakenkat.app.hackerrank.BreakingTheRecordsTest" time="0.001"/>
+  <testcase name="testOne(TestInfo)" classname="xyz.krakenkat.app.hackerrank.BreakingTheRecordsTest" time="0"/>
 </testsuite>
