@@ -9,9 +9,10 @@
 
     Three pairs meet criteria: [1, 4], [2, 3] and [4, 6]
 */
+package xyz.krakenkat.app.hackerrank;
+
 public class DivisibleSumPairs {
-    
-    static int divisibleSumPairs(int n, int k, int[] ar) {
+    public int divisibleSumPairs(int n, int k, int[] ar) {
         int counter = 0;
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
@@ -20,10 +21,5 @@ public class DivisibleSumPairs {
             }
         }
         return counter;
-    }
-    
-    public static void main(String[] args) {
-        int[] ar = {1, 3, 2, 6, 1, 2};
-        System.out.println(divisibleSumPairs(6, 3, ar));
     }
 }
