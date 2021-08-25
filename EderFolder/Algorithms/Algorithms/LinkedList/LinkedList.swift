@@ -77,9 +77,9 @@ class LinkedList {
         return dummyHead!.next!
     }
     
-    public static func testCyclicity(list1: ListNode) -> ListNode? {
-        var slow: ListNode? = list1
-        var fast: ListNode? = list1
+    public static func testCyclicity(list: ListNode) -> ListNode? {
+        var slow: ListNode? = list
+        var fast: ListNode? = list
         
         while fast != nil && fast?.next != nil {
             slow = slow?.next
@@ -94,8 +94,8 @@ class LinkedList {
                     fast = fast?.next
                 } while slow !== fast
                 
-                var advancedIterator: ListNode? = list1
-                var iter: ListNode? = list1
+                var advancedIterator: ListNode? = list
+                var iter: ListNode? = list
                 
                 // Start of cycle
                 while cycleLen > 0 {
@@ -114,5 +114,117 @@ class LinkedList {
         }
         
         return nil
+    }
+    
+    /**
+     * Primero mover ahead pointer nth positions, luego mover los dos punteros hasta
+     * que ahead pointer alcance el fin de lista de esta manera current pointer apuntara a nth from the last
+     */
+    
+    public static func findNthToLast(list: ListNode, nth: Int) -> ListNode? {
+        var ahead: ListNode? = list
+        var current: ListNode? = list
+        
+        
+        for _ in 1..<nth {
+            ahead = ahead?.next
+        }
+        
+        while ahead?.next != nil {
+            ahead = ahead?.next
+            current = current?.next
+        }
+        
+        return current
+    }
+    
+    /**
+     *
+     */
+    
+    public static func removeNodeKeepingSecuence(list: inout ListNode){
+        if let next = list.next {
+            list.value = next.value
+            list.next = next.next
+        }
+    }
+    
+    /// Return beginning of the loop
+    /// - Parameter list: list
+    public static func returnBeginningLoop(list: ListNode) -> ListNode? {
+        var fastRunner: ListNode? = list
+        var slowRunner: ListNode? = list
+        
+        while slowRunner?.next != nil {
+            fastRunner = fastRunner?.next?.next
+            slowRunner = slowRunner?.next
+            
+            if fastRunner === slowRunner {
+                break
+            }
+        }
+        
+        if slowRunner?.next == nil {
+            return nil
+        }
+        
+        slowRunner = list
+        
+        while slowRunner?.next != nil {
+            fastRunner = fastRunner?.next
+            slowRunner = slowRunner?.next
+            
+            if fastRunner === slowRunner {
+                return fastRunner
+            }
+        }
+        
+        return nil
+    }
+    
+    public static func sumTwoList(list1: ListNode, list2: ListNode) -> ListNode {
+        var list1: ListNode? = list1
+        var list2: ListNode? = list2
+        var resultList: ListNode?
+        
+        var number1 = 0
+        var number2 = 0
+        var result = 0
+        var digits = 1
+        
+        while list1?.value != nil || list2?.value != nil {
+            number1 = (number1 * 10) + (list1?.value ?? 0)
+            number2 = (number2 * 10) + (list2?.value ?? 0)
+            
+            digits *= 10
+            
+            list1 = list1?.next
+            list2 = list2?.next
+        }
+        
+        result = number1 + number2
+        
+        digits = Int(result / digits) > 0 ? digits : digits / 10
+        
+        while result > 10 || digits > 9 {
+            if resultList == nil {
+                resultList = ListNode(data: Int(result / digits))
+            } else {
+                resultList?.appendValue(data: Int(result / digits))
+            }
+            
+            result = result % digits
+            digits /= 10
+        }
+        
+        if result > 0 {
+            if resultList == nil {
+                resultList = ListNode(data: Int(result / digits))
+            } else {
+                resultList?.appendValue(data: Int(result / digits))
+            }
+        }
+                        
+        return resultList!
     }
 }

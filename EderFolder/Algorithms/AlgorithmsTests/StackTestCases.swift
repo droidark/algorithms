@@ -61,19 +61,25 @@ class StackTestCases: XCTestCase {
     // Reverted() interviewers had asked me to do it manually
     
     func testSortZeros() {
-        var example = [1,4,60,2,3,5,0,34,0,534]
-        var example2 = [1,4,60,2,3,5,0,34,534,0]
-        var example3 = [0,1,4,60,2,3]
-        var example4 = [0,0,0,0,4]
-        var example5 = [10,10,10,10,0]
-        var example6 = [0,0,0]
+//        var example = [1,4,60,2,3,5,0,34,0,534]
+//        var example2 = [1,4,60,2,3,5,0,34,534,0]
+//        var example3 = [0,1,4,60,2,3]
+//        var example4 = [0,0,0,0,4]
+//        var example5 = [10,10,10,10,0]
+//        var example6 = [0,0,0]
+//
+//        sortZeros(input: &example)
+//        sortZeros(input: &example2)
+//        sortZeros(input: &example3)
+//        sortZeros(input: &example4)
+//        sortZeros(input: &example5)
+//        sortZeros(input: &example6)
         
-        sortZeros(input: &example)
-        sortZeros(input: &example2)
-        sortZeros(input: &example3)
-        sortZeros(input: &example4)
-        sortZeros(input: &example5)
-        sortZeros(input: &example6)
+        
+//        let uno =
+//        let dos = 4
+        
+        print(Int(7/2))
         
     }
     

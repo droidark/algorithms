@@ -41,7 +41,15 @@ class ListNode {
         tail = lastNode
     }
     
-    func appendNode(node: ListNode) {
+    
+    
+    /// Added Node to the End of the linked list
+    /// - Parameters:
+    ///   - node: Node to Append
+    ///   - pointTailToLastElement: flag to indicate that we need no assign tail to the last element of the sublist.
+    ///   This is to prevent to create an infinite loop when is a circular list
+    ///
+    func appendNode(node: ListNode, pointTailToLastElement: Bool = true) {
         guard node !== self else {
             print("Cannot append node to the existing list. It will create a cycle")
             return
@@ -50,6 +58,8 @@ class ListNode {
         tail = tail ?? lastElement()
         
         tail?.next = node
+        
+        guard pointTailToLastElement else { return }
         
         var currentNode: ListNode? = self
         
