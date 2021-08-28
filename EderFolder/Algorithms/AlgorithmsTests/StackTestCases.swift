@@ -107,21 +107,51 @@ class StackTestCases: XCTestCase {
         XCTAssert(stack3.maxElement() == 5)
         _ = stack3.pop()
         XCTAssert(stack3.maxElement() == nil)
+    }
+    
+    /**
+     * Book Crack Code TikTok
+     *  Problem 3.3 Imagine a (literal) stack of plates. If the stack gets too high, it might topple.
+     *  Therefore, in real life, we would likely start a new stack when the previous stack exceeds some threshold.
+     */
+    
+    func testSetOfStacks(){
+        let setStacks = SetStacks(limitOfStacks: [3,3,3,3])
         
-        var hola = [Int: Int]()
+        setStacks.push(1)
+        setStacks.push(2)
+        setStacks.push(3)
+        setStacks.push(4)
         
-        var dicitionary = [
-            "a": 43,
-            "b": 43,
-            "c": 43,
-            "d": 43,
-            "e": 43
-        ]
+        print(setStacks.stacks)
         
-        let a = dicitionary.dropFirst()
+//        XCTAssertTrue(setStacks.pop() == 4)
+//        XCTAssertTrue(setStacks.pop() == 3)
         
-        print(a)
-        print(dicitionary)
+        
+    }
+    
+    /**
+     * Book Crack Code TikTok
+     *  Problem 2.5 Tower Hanoi
+     *  Therefore, in real life, we would likely start a new stack when the previous stack exceeds some threshold.
+     */
+    
+    func testTowerHanoi(){
+        var stack1: Stack<Int> = {
+            var stack = Stack<Int>()
+            stack.push(5)
+            stack.push(10)
+            stack.push(15)
+
+            return stack
+        }()
+        
+        var stack2 = Stack<Int>()
+        var stack3 = Stack<Int>()
+        
+        StackUtilities.towersHanoi(source: &stack1, target: &stack3, aux: &stack2, numberDiscs: 3)
+        
         
     }
 }
