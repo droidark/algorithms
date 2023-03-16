@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
 
 public class MoveZerosToEndTest {
     
@@ -12,7 +11,7 @@ public class MoveZerosToEndTest {
 
     @Test
     @DisplayName("should be true")
-    void testOne(TestInfo testInfo) {
+    void testOne() {
         // Given
         int[] arr = {0, 1, 0, 3, 12};
 
@@ -25,7 +24,7 @@ public class MoveZerosToEndTest {
 
     @Test
     @DisplayName("should be true")
-    void testTwo(TestInfo testInfo) {
+    void testTwo() {
         // Given
         int[] arr = {1, 4, 60, 2, 3, 5, 0, 34, 534, 0};
 
@@ -38,7 +37,7 @@ public class MoveZerosToEndTest {
 
     @Test
     @DisplayName("should be true")
-    void testThree(TestInfo testInfo) {
+    void testThree() {
         // Given
         int[] arr = {0, 1, 4, 60, 2, 3};
 
@@ -51,7 +50,7 @@ public class MoveZerosToEndTest {
 
     @Test
     @DisplayName("should be true")
-    void testFour(TestInfo testInfo) {
+    void testFour() {
         // Given
         int[] arr = {0, 0, 0, 0, 4};
 
@@ -64,7 +63,7 @@ public class MoveZerosToEndTest {
 
     @Test
     @DisplayName("should be true")
-    void testFive(TestInfo testInfo) {
+    void testFive() {
         // Given
         int[] arr = {10, 10, 10, 10, 0};
 
@@ -77,7 +76,7 @@ public class MoveZerosToEndTest {
 
     @Test
     @DisplayName("should be true")
-    void testSix(TestInfo testInfo) {
+    void testSix() {
         // Given
         int[] arr = {0, 0, 0};
 
