@@ -81,6 +81,28 @@ class LinkedListTestCases: XCTestCase {
         return list
     }()
     
+    lazy var circularList: ListNode = {
+        let list = ListNode(data: 3)
+        let beginningLoop = ListNode(data: 10)
+        let endLoop = ListNode(data: 19)
+        endLoop.next = beginningLoop
+        
+        list.appendValue(data: 4)
+        list.appendValue(data: 6)
+        list.appendValue(data: 7)
+        list.appendValue(data: 8)
+        list.appendValue(data: 9)
+        list.appendNode(node: beginningLoop)
+        list.appendValue(data: 11)
+        list.appendValue(data: 12)
+        list.appendValue(data: 13)
+        list.appendValue(data: 14)
+        list.appendValue(data: 15)
+        list.appendNode(node: endLoop, pointTailToLastElement: false)
+        
+        return list
+    }()
+    
     
     /**
      * Book Elements of Programming Interviews In Java
@@ -126,8 +148,71 @@ class LinkedListTestCases: XCTestCase {
         list6.appendNode(node: list7)
         list6.lastNode.next = list7
         
-        XCTAssertTrue(LinkedList.testCyclicity(list1: list3)?.value == list2.value)
-        XCTAssertTrue(LinkedList.testCyclicity(list1: list6)?.value == list7.value)
-        XCTAssertTrue(LinkedList.testCyclicity(list1: list1) == nil)
+        XCTAssertTrue(LinkedList.testCyclicity(list: list3)?.value == list2.value)
+        XCTAssertTrue(LinkedList.testCyclicity(list: list6)?.value == list7.value)
+        XCTAssertTrue(LinkedList.testCyclicity(list: list1) == nil)
+    }
+    
+    /**
+     * Book  CrackCode (Tik Tok)
+     * Problem 2.2  Linked List
+     *
+     */
+    
+    func testFindNthElement() {
+        XCTAssertTrue(LinkedList.findNthToLast(list: list1, nth: 2)?.value == 32)
+        XCTAssertTrue(LinkedList.findNthToLast(list: list1, nth: 3)?.value == 12)
+        XCTAssertTrue(LinkedList.findNthToLast(list: list1, nth: 4)?.value == 8)
+        XCTAssertTrue(LinkedList.findNthToLast(list: list1, nth: 5)?.value == 6)
+    }
+    
+    /**
+     * Book  CrackCode (Tik Tok)
+     * Problem 2.5  Linked List
+     *
+     */
+    
+    func testReturnBeginningLoop() {
+        XCTAssertTrue(LinkedList.returnBeginningLoop(list: circularList)?.value == 10)
+        XCTAssertTrue(LinkedList.returnBeginningLoop(list: list1) == nil)
+        XCTAssertTrue(LinkedList.returnBeginningLoop(list: list2) == nil)
+    }
+    
+    /**
+     * Book  CrackCode (Tik Tok)
+     * Problem 2.4  Linked List
+     *
+     */
+    
+    func testSumTwoList() {
+        print(Int(18 + 27))
+        XCTAssertTrue(LinkedList.sumTwoList(list1: list3, list2: list5).asArray() == [4,5])
+
+        let list1 = ListNode(data: 3)
+        let list8 = ListNode(data: 8)
+        XCTAssertTrue(LinkedList.sumTwoList(list1: list1, list2: list8).asArray() == [1,1])
+
+        let list99 = ListNode(data: 9)
+            list99.appendValue(data: 9)
+
+        XCTAssertTrue(LinkedList.sumTwoList(list1: list99, list2: list99).asArray() == [1,9,8])
+        
+        let list987690 = ListNode(data: 9)
+        list987690.appendValue(data: 8)
+        list987690.appendValue(data: 7)
+        list987690.appendValue(data: 6)
+        list987690.appendValue(data: 9)
+        list987690.appendValue(data: 0)
+        
+        let list567919 = ListNode(data: 5)
+        list567919.appendValue(data: 6)
+        list567919.appendValue(data: 7)
+        list567919.appendValue(data: 9)
+        list567919.appendValue(data: 1)
+        list567919.appendValue(data: 9)
+        
+        print(LinkedList.sumTwoList(list1: list987690, list2: list567919).asArray())
+        
+        XCTAssertTrue(LinkedList.sumTwoList(list1: list987690, list2: list567919).asArray() == [1,5,5,5,6,0,9])
     }
 }

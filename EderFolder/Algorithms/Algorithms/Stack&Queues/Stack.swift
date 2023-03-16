@@ -20,7 +20,7 @@ struct Stack<T: Comparable> {
     
     mutating func push(_ element: T){
         myArray.append(element)
-        max.append(Swift.max(element, max.last ?? element))
+//        max.append(Swift.max(element, max.last ?? element))
     }
     
     mutating func pop() -> T? {
