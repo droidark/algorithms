@@ -47,7 +47,7 @@ public class SubArrayWithGivenSum {
 				}
 				count++;
 			}
-			if(sumVal == num) {
+			if (sumVal == num) {
 				break;	// If num is found, the loop is broke.
 			}
 		}
