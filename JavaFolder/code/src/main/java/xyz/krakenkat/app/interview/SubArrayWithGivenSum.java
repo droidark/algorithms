@@ -41,8 +41,7 @@ public class SubArrayWithGivenSum {
 					str = new StringBuilder(); // Clean the StringBuilder
 					count--; // The count decrease to consider the exceed number
 					break;
-				}
-				else {
+				} else {
 					sumVal += array[count];
 					str.append(count + " ");
 				}
