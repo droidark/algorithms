@@ -1,5 +1,3 @@
-package xyz.krakenkat.app.interview;
-
 /*
 	FIND SUB ARRAY WITH GIVEN SUM
 
@@ -27,7 +25,7 @@ package xyz.krakenkat.app.interview;
 		https://www.geeksforgeeks.org/find-subarray-with-given-sum/
 		https://www.youtube.com/watch?v=Ofl4KgFhLsM
 */
-
+package xyz.krakenkat.app.interview;
 
 public class SubArrayWithGivenSum {
 
@@ -51,7 +49,7 @@ public class SubArrayWithGivenSum {
 				count++;
 			}
 			if(sumVal == num) {
-				break;	//	if num is found, the loop is broke.
+				break;	// if num is found, the loop is broke.
 			}
 		}
 
