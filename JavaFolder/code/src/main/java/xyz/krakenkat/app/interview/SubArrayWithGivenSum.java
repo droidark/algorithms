@@ -49,7 +49,7 @@ public class SubArrayWithGivenSum {
 				count++;
 			}
 			if(sumVal == num) {
-				break;	// if num is found, the loop is broke.
+				break;	// If num is found, the loop is broke.
 			}
 		}
 
