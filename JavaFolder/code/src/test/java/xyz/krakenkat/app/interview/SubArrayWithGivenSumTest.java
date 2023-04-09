@@ -14,7 +14,7 @@ public class SubArrayWithGivenSumTest {
     void testOne() {
         // Given
         int[] arr = {10, 3, 5, 8, 6, 12, 20, 15, 31};
-		int num = 31;
+        int num = 31;
 
         // When
         int[] actual = subArrayWithGivenSum.getSubArrayWithGivenSum(arr, num);
@@ -28,7 +28,7 @@ public class SubArrayWithGivenSumTest {
     void testTwo() {
         // Given
         int[] arr = {1, 4, 0, 0, 3, 10, 5};
-		int num = 7;
+        int num = 7;
 
         // When
         int[] actual = subArrayWithGivenSum.getSubArrayWithGivenSum(arr, num);
@@ -42,7 +42,7 @@ public class SubArrayWithGivenSumTest {
     void testThree() {
         // Given
         int[] arr = {1, 4};
-		int num = 0;
+        int num = 0;
 
         // When
         int[] actual = subArrayWithGivenSum.getSubArrayWithGivenSum(arr, num);
